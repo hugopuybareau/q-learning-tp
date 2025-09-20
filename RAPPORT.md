@@ -8,6 +8,32 @@
 ### Question 2
 *Modifier un seul des 2 paramètres (noise ou discount) pour obtenir une politique optimale qui permet à l'agent de traverser le pont (s'il n'était pas soumis au bruit). Préciser le paramètre modifié et sa valeur dans votre rapport et justifier votre choix.*
 
+Paramètre modifié: `noise = 0.0` (au lieu de 0.2)
+
+Justification:
+Le problème avec les paramètres par défaut est que le bruit (noise=0.2) crée un risque de 20% de dévier perpendiculairement à la direction souhaitée. Sur le pont, cela signifie:
+
+Probabilité de 0.2 de tomber dans les cases -100
+Perte espérée par déplacement: 0.2 × (-100) = -20
+
+Ce qui donne pour le calcul de l'espérance:
+`E(traverser) = P(succés) × 10 + P(échec) × (-100)`
+5 étapes et le bruit à 0.2:
+ - `P(success) = 0.8^5 ≈ 0.33`
+ - `P(failure) ≈ 0.67`
+Soit `E(traverser) ≈ 0.33×10 + 0.67×(-100) = 3.3 - 67 = -63.7`
+vs `E(rester) = 1`
+
+Avec 5 déplacements nécessaires pour traverser: risque cumulé très élevé
+
+En mettant noise = 0.0:
+
+ - L'environnement devient déterministe
+ - L'agent peut traverser sans risque de tomber
+ - La récompense +10 devient atteignable sans danger avec `E(traverser) = 10`
+ - La politique optimale dirigera l'agent vers la droite pour obtenir +10
+
+
 ### Question 3
 *Modifier un seul des 3 paramètres (noise, discount, livingReward) pour obtenir les politiques optimales ci-dessous. Préciser pour chaque politique, le paramètre modifié et sa valeur dans votre rapport et justifier votre choix.*
 

@@ -12,7 +12,6 @@ import mdp
 import environment
 import util
 import optparse
-import time
 
 
 class Gridworld(mdp.MarkovDecisionProcess):
@@ -618,7 +617,8 @@ if __name__ == "__main__":
     # GET THE AGENT
     ###########################
 
-    import valueIterationAgents, qlearningAgents
+    import valueIterationAgents
+    import qlearningAgents
 
     a = None
     if opts.agent == "value":

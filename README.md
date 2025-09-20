@@ -51,7 +51,7 @@ Compléter `valueIterationAgents.py` pour obtenir un agent qui planifie en utili
 - vous utiliserez la version *batch* de l'algorithme où la fonction de valeur à l'itération *k* est calculée à partir de la fonction de valeur à l'itération *k-1*.
 
 
-Pour tester votre agent, regarder les valeurs et la politique obtenues sur les 3 premières itérations dans  dans l'environnement BookGrid avec les paramètres par défaut: 
+Pour tester votre agent, regarder les valeurs et la politique obtenues sur les 3 premières itérations dans l'environnement BookGrid avec les paramètres par défaut: 
 
 `` python gridworld.py -a value -i 3 -k 0 -v``
 
