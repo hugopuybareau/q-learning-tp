@@ -42,6 +42,24 @@ En mettant noise = 0.0:
 3. qui suit un chemin sûr pour atteindre l’état absorbant de récompense +1 ;
 4. qui évite les états absorbants
 
+1. Chemin risqué vers +1
+
+Paramètre modifié: `discount = 0.1`
+Pourquoi: Avec un discount très faible, l'agent privilégie les récompenses immédiates. Le chemin le plus court vers +1 (3 actions) devient optimal malgré le risque de tomber dans -10. Les pénalités futures sont fortement dévaluées.
+
+3. Chemin sûr vers +1
+
+Paramètre modifié: `discount = 0.3`
+Pourquoi: Avec un discount un peu haut, les récompenses futures conservent un peu plus leur valeur, l'agent va pouvoir se projeter en passant par le haut mais pas au point d'aller chercher le +10.
+
+2. Chemin risqué vers +10
+Paramètre modifié: `livingReward = -1`
+Pourquoi: Avec une pénalité de 1 par étapes en vie, l'agent est encouragé à terminer rapidement. Un +1 n'étant pas suffisant pour combler ses pertes, il se dirige vers le +10 avec le chemin le plus court. 
+
+4. Chemin évitant les états absorbant de récompense +1
+Paramètre modifié: `livingReward = 1`
+Pourquoi : Il gagne 1 par étape donc l'espérance de gain en allant sur une autre case sera toujours plus forte que celle d'aller sur un état absorbant +1.
+
 ## Partie 2: QLearning tabulaire
 
 ### Question 4
