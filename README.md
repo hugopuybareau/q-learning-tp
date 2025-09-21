@@ -156,7 +156,7 @@ Tester tout d'abord votre niveau à Pacman:
 
 Le score est modifié à chaque étape d'une partie avec:
 - +500 si le pacman a mangé tous les dots (gagne la partie)
-- +200 si le pacman mange un fantome effrayé (les fantomes passent en mode effrayé pendant un certain temps lorsque le pacman mange une capsule (*big dot*)
+- +200 si le pacman mange un fantome effrayé (les fantomes passent en mode effrayé pendant un certain temps lorsque le pacman mange une capsule (*big dot*))
 - +10 si le pacman mange une nourriture
 - -1 à chaque étape
 - -500 si le pacman perd la partie (se fait manger par un fantome)
@@ -205,6 +205,6 @@ Votre agent devrait gagner presque toutes les parties, même dans des labyrinthe
 
 Les features proposées dans `SimpleExtractor` ignorent les capsules. Compléter la classe `ExpertExtractor` (dans `featureExtractors.py`) pour considérer les capsules et permettre à l'agent pacman de chasser les fantômes. Tester dans des labyrinthes avec capsule (d'autres labyrinthes sont présents dans le dossier `layout`, par ex. smallClassic et capsuleClassic).
 
-**Question 8: Expliquer dans le rapport les features que vous avez implémentées et leurs rôles. Présenter et analyser les résultats obtenus. **
+**Question 8: Expliquer dans le rapport les features que vous avez implémentées et leurs rôles. Présenter et analyser les résultats obtenus.**
 
 

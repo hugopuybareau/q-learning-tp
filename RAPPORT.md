@@ -78,6 +78,7 @@ Quand `epsilon = 0.9`, c'est l'inverse! L'agent aime explorer et a tendance à i
 L'état (s) est défini par un tuple (armBucket, handBucket) (lines 20-39): 
  - `armBucket` représente les 9 angles/positions possibles du bras.
  - `handBucket` représente les 13 angles/positions possibles de la main.
+Cela fait 117 états en tout. 
 
 Les actions possibles (a) sont (lines 61-64): 
  - 'arm-up': Lever le bras (si pas déjà au maximum)
@@ -91,6 +92,7 @@ La récompense est définie par la distance parcourue (line 105):
 
 ### Question 7
 *Expliquer les résultats obtenus et préciser dans le rapport les solutions que l'on peut mettre en place pour améliorer ces résultats.*
+
 
 ### Question 8
 *Expliquer dans le rapport les features que vous avez implémentées et leurs rôles. Présenter et analyser les résultats obtenus.*
