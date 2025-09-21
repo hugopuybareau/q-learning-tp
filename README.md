@@ -193,13 +193,13 @@ Compléter la classe `ApproximateQAgent` (dans `QLearningAgent.py`).
 
 Tester votre agent avec `IdentityExtractor` pour vérifier que le résultat est similaire au QLearning tabulaire:
 
-`python pacman.py -p ApproximateQAgent -x 2000 -n 2010 -l smallGrid`
+`python pacman.py -p ApproximateQAgent -x 2000 -n 2010 -l smallGrid` ça ok
 
 Tester votre agent avec `SimpleExtractor` dans différents labyrinthes:
 
-`python pacman.py -p ApproximateQAgent -a extractor=SimpleExtractor -x 50 -n 60 -l mediumGrid`
+`python pacman.py -p ApproximateQAgent -a extractor=SimpleExtractor -x 50 -n 60 -l mediumGrid` ok 
 
-`python pacman.py -p ApproximateQAgent -a extractor=SimpleExtractor -x 50 -n 60 -l mediumClassic` 
+`python pacman.py -p ApproximateQAgent -a extractor=SimpleExtractor -x 50 -n 60 -l mediumClassic` hmm des fois il perd quand même donc jsp
 
 Votre agent devrait gagner presque toutes les parties, même dans des labyrinthes plus complexes, et avec moins d'épisodes d'entrainement.
 

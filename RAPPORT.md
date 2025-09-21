@@ -108,6 +108,20 @@ Pour donner d'autres solutions que celle implémentée en question 8 :
 ### Question 8
 *Expliquer dans le rapport les features que vous avez implémentées et leurs rôles. Présenter et analyser les résultats obtenus.*
 
+Features implémentées dans ExpertExtractor:
+
+ - `bias`: Terme constant (1.0) pour l'apprentissage de base
+ - `eats-food`: 1 si l'action mange de la nourriture (condition: pas de danger)
+ - `closest-food`: Distance normalisée à la nourriture la plus proche
+ - `ghosts-1-step-away`: Nombre de fantômes à 1 case de distance
+ - `closest-capsule`: Distance normalisée à la capsule la plus proche pour guider pacman vers les capsules s'il est menacé
+ - `eats-capsule`: Récompense le poussant à chasser
+ - `closest-scared-ghost`: Distance au fantôme effrayé le plus proche pour lui permettre de chasser
+ - `eats-scared-ghost`: Récompense s'il réussi à chasser
+ - `danger-normal-ghost`: Éviter les fantômes avec différents malus en fonction de la proximitée
+
+
+
 
 
 
