@@ -5,6 +5,10 @@
 ### Question 1 
 *Préciser le détail du calcul de la politique gloutonne pour les 3 premières itérations de Value Iteration dans l'environnement BookGrid avec les paramètres par défaut*
 
+![Calculs itérations 0 et 1](./screenshots/iteration-0-1.png)
+![Calculs itérations 2 et 3](./screenshots/interation-2-3.png)
+![Calculs itération 3](./screenshots/iteration-3.png)
+
 ### Question 2
 *Modifier un seul des 2 paramètres (noise ou discount) pour obtenir une politique optimale qui permet à l'agent de traverser le pont (s'il n'était pas soumis au bruit). Préciser le paramètre modifié et sa valeur dans votre rapport et justifier votre choix.*
 
@@ -65,10 +69,17 @@ Pourquoi : Il gagne 1 par étape donc l'espérance de gain en allant sur une aut
 ### Question 4
 *Précisez le détail du calcul des qvaleurs pour les 3 premiers épisodes.*
 
+![Tous les épisodes — Q-values](./screenshots/q4.png)
+![Calculs épisodes 1 & 2](./screenshots/episodes-1-2.png)
+![Calculs épisodes 3 & 4](./screenshots/episodes-3-4.png)
+
 ### Question 5
 *Expliquer les différences entre le résultat obtenu avec epsilon à 0.1 et à 0.9.*
 
 Quand `epsilon = 0.1`, l'agent est greedy à 90%, il a donc tendance à ne visiter que les chemins qui lui promettent des récompenses, c'est à dire ceux qu'il a visité au début. C'est pour ça qu'il n'y a du vert que d'un côté. 
+
+![Politique pour epsilon = 0.1](./screenshots/politique-01.png)
+![Politique pour epsilon = 0.9](./screenshots/politique-09.png)
 
 Quand `epsilon = 0.9`, c'est l'inverse! L'agent aime explorer et a tendance à ignorer les récompenses 90% du temps. C'est pour ça que la plupart des cases sont explorées et que leur q_values ont été mises à jour. 
 
