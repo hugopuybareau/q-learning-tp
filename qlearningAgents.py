@@ -128,11 +128,11 @@ class QLearningAgent(ReinforcementAgent):
         NOTE: You should never call this function,
         it will be called on your behalf
         """
-        # Q(s,a) = Q(s,a) + alpha × [reward + discount × max_a' Q(s',a') - Q(s,a)]
+        # Q(s,a) = (1-alpha)*Q(s,a) + alpha × [reward + discount × max_a' Q(s',a')]
 
         old_q_value = self.getQValue(state, action)
         max_next_q_value = self.getValue(nextState)
-        new_q_value = old_q_value + self.alpha * (reward + self.discount * max_next_q_value - old_q_value)
+        new_q_value = (1 - self.alpha) * old_q_value + self.alpha * (reward + self.discount * max_next_q_value)
         self.setQValue(state, action, new_q_value)
 
 

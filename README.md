@@ -112,7 +112,7 @@ Tester votre agent en le déplacant manuellement:
 
 `python gridworld.py -a q -k 5 -m`
 
-JEN SUIS LÀ Vérifier les valeurs obtenues avec les valeurs théoriques sur les 4 épisodes suivants: les 2 premiers épisodes, l'agent va tout au nord puis tout à l'est (récompense de +1), les 3eme et 4eme épisodes il va tout à l'est puis au nord (récompense de -1). 
+Vérifier les valeurs obtenues avec les valeurs théoriques sur les 4 épisodes suivants: les 2 premiers épisodes, l'agent va tout au nord puis tout à l'est (récompense de +1), les 3eme et 4eme épisodes il va tout à l'est puis au nord (récompense de -1). 
 
 **Question 4: Préciser dans le rapport le détail du calcul des valeurs théoriques.**
 
