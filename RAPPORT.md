@@ -93,6 +93,17 @@ La récompense est définie par la distance parcourue (line 105):
 ### Question 7
 *Expliquer les résultats obtenus et préciser dans le rapport les solutions que l'on peut mettre en place pour améliorer ces résultats.*
 
+On voit bien que dans la small_grid, pacman s'en sort très bien et a presque 100% de victoire.
+Dans la medium_grid, c'est l'inverse, il ne gagne quasiment jamais et son comportement semble presque aléatoire. 
+
+Explication : 
+ - L'espace d'état devient beaucoup trop grand lors du passage de small_grid à medium_grid. Sur la small_grid il y a 9 positions possibles pour lui, le fantom et la nourriture. On est maximum à 9^3 (729) x position des capsules/murs/récompense. Sur la medium_grid, il y a déjà 16^3 * 16 * 16 comme il y a trois récompenses (1 048 575). C'est donc impossible de visiter tous les états en 2000 épisodes, ce qui explique son comportement aléatoire. De plus, les récompenses sont assez rares et pacman n'est pas capable d'apprendre la similarité entre certain état car le qlearning tabulaire traite chaque état indépendamment des autres. 
+
+Pour donner d'autres solutions que celle implémentée en question 8 : 
+ - On pourrait utiliser des positions relatives plutôt qu'absolues, ce qui permettraient de ne pas avoir une explosion sur le nombre d'état lorsque la grille est plus grande.
+ - Faire plus d'entraînement...
+ - Augmenter les récompenses pour encourager **l'approche** de la nourrite ou pénaliser **l'approche** des fantômes. 
+
 
 ### Question 8
 *Expliquer dans le rapport les features que vous avez implémentées et leurs rôles. Présenter et analyser les résultats obtenus.*
