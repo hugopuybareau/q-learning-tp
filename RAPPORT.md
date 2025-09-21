@@ -68,6 +68,10 @@ Pourquoi : Il gagne 1 par étape donc l'espérance de gain en allant sur une aut
 ### Question 5
 *Expliquer les différences entre le résultat obtenu avec epsilon à 0.1 et à 0.9.*
 
+Quand `epsilon = 0.1`, l'agent est greedy à 90%, il a donc tendance à ne visiter que les chemins qui lui promettent des récompenses, c'est à dire ceux qu'il a visité au début. C'est pour ça qu'il n'y a du vert que d'un côté. 
+
+Quand `epsilon = 0.9`, c'est l'inverse! L'agent aime explorer et a tendance à ignorer les récompenses 90% du temps. C'est pour ça que la plupart des cases sont explorées et que leur q_values ont été mises à jour. 
+
 ### Question 6
 *Préciser comment est modélisé l'environnement robot crawler sous forme de MDP (état, action, récompense) ainsi que la dimension de S. Quel est le comportement attendu de l'agent s'il suit sa politique optimale ?*
 
