@@ -75,6 +75,19 @@ Quand `epsilon = 0.9`, c'est l'inverse! L'agent aime explorer et a tendance à i
 ### Question 6
 *Préciser comment est modélisé l'environnement robot crawler sous forme de MDP (état, action, récompense) ainsi que la dimension de S. Quel est le comportement attendu de l'agent s'il suit sa politique optimale ?*
 
+L'état (s) est défini par un tuple (armBucket, handBucket) (lines 20-39): 
+ - `armBucket` représente les 9 angles/positions possibles du bras.
+ - `handBucket` représente les 13 angles/positions possibles de la main.
+
+Les actions possibles (a) sont (lines 61-64): 
+ - 'arm-up': Lever le bras (si pas déjà au maximum)
+ - 'arm-down': Baisser le bras (si pas déjà au minimum)
+ - 'hand-up': Lever la main (si pas déjà au maximum)
+ - 'hand-down': Baisser la main (si pas déjà au minimum)
+
+La récompense est définie par la distance parcourue (line 105):
+ - reward = newX - oldX
+
 
 ### Question 7
 *Expliquer les résultats obtenus et préciser dans le rapport les solutions que l'on peut mettre en place pour améliorer ces résultats.*
