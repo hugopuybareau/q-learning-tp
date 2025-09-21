@@ -6,7 +6,7 @@
 *Préciser le détail du calcul de la politique gloutonne pour les 3 premières itérations de Value Iteration dans l'environnement BookGrid avec les paramètres par défaut*
 
 ![Calculs itérations 0 et 1](./screenshots/iteration-0-1.png)
-![Calculs itérations 2 et 3](./screenshots/interation-2-3.png)
+![Calculs itérations 2 et 3](./screenshots/iteration-2-3.png)
 ![Calculs itération 3](./screenshots/iteration-3.png)
 
 ### Question 2
