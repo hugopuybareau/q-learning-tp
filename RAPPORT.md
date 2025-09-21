@@ -89,7 +89,7 @@ Quand `epsilon = 0.9`, c'est l'inverse! L'agent aime explorer et a tendance à i
 L'état (s) est défini par un tuple (armBucket, handBucket) (lines 20-39): 
  - `armBucket` représente les 9 angles/positions possibles du bras.
  - `handBucket` représente les 13 angles/positions possibles de la main.
-Cela fait 117 états en tout. 
+La dimension de l'espace d'état est donc de 117.
 
 Les actions possibles (a) sont (lines 61-64): 
  - 'arm-up': Lever le bras (si pas déjà au maximum)
@@ -99,6 +99,8 @@ Les actions possibles (a) sont (lines 61-64):
 
 La récompense est définie par la distance parcourue (line 105):
  - reward = newX - oldX
+
+Le mouvement optimal ressemble à quelque chose qui rampe, le robot utilise son bras et sa main de manière coordonnée pour se déplacer.
 
 
 ### Question 7
